@@ -1,4 +1,4 @@
-﻿//末影之眼定位算法,2020年7月18日 19:58创建工程
+//末影之眼定位算法,2020年7月18日 19:58创建工程
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
@@ -98,11 +98,34 @@ int main() {
 	printf("\t3、共需输入三次，第三次输入完成后程序会计算主世界末地传送门并显示;\n\n\n");
 	printf("计算得出的位置可能有偏差，扔出的三点相隔的距离要适当\n\n");
 	printf("如果输入的数据出现问题可能导致计算结果出现错误，例如出现\"inf\"\n\n\n\n");
-
+CHOOSE:
 	int choose1;
-	printf("输入1开始，0退出:");
+	printf("选择操作:\n");
+	printf("\t1——> 开始\n");
+	printf("\t2——> 打开视频教程\n");
+	printf("\t3——> 打开GitHub仓库网址\n");
+	printf("\t0——> 退出\n:");
+
 	cin >> choose1;
-	if (choose1 != 1) {
+	switch (choose1)
+	{
+	case 0:
+		exit(1);
+	case 1:
+		;
+		break;
+	case 2:
+		system("start https://www.bilibili.com/video/BV1V5411e7kh");
+		system("cls");
+		goto CHOOSE;
+		break;
+	case 3:
+		system("start https://github.com/Temperature6/Eye-of-Ender-Positioning-Algorithm");
+		system("cls");
+		goto CHOOSE;
+		break;
+	default:
+		printf("你咋不听话nie?\n");
 		exit(1);
 	}
 	system("cls");
